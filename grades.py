@@ -16,3 +16,8 @@ def mention(avg):
         return "Moyen"
     else:
         return "Bien"
+
+def max_grade(values):
+    if not values:
+        return None
+    return max(values)

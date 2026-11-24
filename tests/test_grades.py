@@ -1,4 +1,4 @@
-from grades import clean_grades, average, mention
+from grades import clean_grades, average, mention, max_grade
 
 def test_clean_grades():
     values = [10, 15, -2, 22, "abc", 18]
@@ -15,3 +15,7 @@ def test_mention():
     assert mention(8) == "Insuffisant"
     assert mention(12) == "Moyen"
     assert mention(16) == "Bien"
+
+def test_max_grade():
+    assert max_grade([10, 15, 18]) == 18
+    assert max_grade([]) is None
