@@ -8,3 +8,16 @@ test:
   script:
     - pip install pytest
     - pytest
+
+build:
+  stage: build
+  script:
+    - echo "Résumé du projet CI/CD" > report.txt
+  artifacts:
+    paths:
+      - report.txt
+
+deploy:
+  stage: deploy
+  script:
+    - cat report.txt
