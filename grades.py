@@ -15,7 +15,7 @@ def mention(avg):
     elif avg < 14:
         return "Moyen"
     else:
-        return "tres Bien"
+        return "Bien"
 
 def max_grade(values):
     if not values:
